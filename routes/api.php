@@ -38,4 +38,5 @@ Route::patch('/tasks/{task}/done', [TaskController::class, 'markAsDone']);
 Route::get('/tasks/done', [TaskController::class, 'getDoneTasks']);
 // put pending
 Route::put('/tasks/{task}/pending', [TaskController::class, 'markAsPending']);
-
+// destroy project
+Route::delete('/projects/{project}', [ProjectController::class, 'destroy']);

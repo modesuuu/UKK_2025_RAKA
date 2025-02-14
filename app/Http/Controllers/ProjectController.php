@@ -79,6 +79,7 @@ class ProjectController extends Controller
     public function destroy(Project $project)
     {
         $project->delete();
-        return response()->json(null, 204);
-    }
+
+        return response()->json(['message' => 'Project deleted successfully'], 204);
+        }
 }
